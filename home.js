@@ -1,5 +1,5 @@
 export {fillPageCategory};
-const fillPageCategory = function() {
+function fillPageCategory() {
     promisedCategory.then((category) => {
         if (category.length > 0) {
             for (let key in category) {
