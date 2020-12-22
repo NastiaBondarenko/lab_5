@@ -1,6 +1,6 @@
 'use strict'
 
-import {routes, router} from './router.js';
+import {routes} from './router.js';
 
 
 function getContent(url) {

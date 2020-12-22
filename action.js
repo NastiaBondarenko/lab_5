@@ -1,5 +1,5 @@
 
-const fillAction = () =>{
+export function fillAction(){
 	promisedAction.then((action) => {
 		if (action.length > 0) {
 		    for (let key in action) {
