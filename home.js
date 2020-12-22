@@ -1,4 +1,5 @@
 export {fillPageCategory};
+
 function fillPageCategory() {
     promisedCategory.then((category) => {
         if (category.length > 0) {
