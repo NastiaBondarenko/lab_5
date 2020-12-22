@@ -1,6 +1,6 @@
 import {fillOrder} from './order.js'
 
-export const routes = [
+const routes = [
     { path: "#action", view: fillAction },
     { path: "#home", view: fillPageCategory },
     { path: "#", view: fillPageCategoryObnov },
@@ -14,7 +14,7 @@ export const routes = [
 
 
 
-export function router(){
+function router(){
 
 	let a = window.location.href;
 	let k = a.indexOf('#');
@@ -43,3 +43,5 @@ export function router(){
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0;    
 }
+
+export {routes, router};
