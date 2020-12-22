@@ -14,7 +14,7 @@ export const routes = [
 
 
 
-export const router = () =>{
+export function router(){
 
 	let a = window.location.href;
 	let k = a.indexOf('#');
