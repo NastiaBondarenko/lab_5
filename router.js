@@ -1,5 +1,9 @@
 import {fillOrder} from './order.js';
 import {fillAction} from './action.js';
+import {fillPageCategory} from './home.js';
+import {fillPageCategoryObnov} from './fillPageCategoryObnov.js';
+import {fillOneAction} from './oneAction.js';
+import {fillOneProduct} from './oneProduct.js';
 
 const routes = [
     { path: "#action", view: fillAction },

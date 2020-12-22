@@ -1,6 +1,6 @@
+export {fillPageCategoryObnov};
+
 const fillPageCategoryObnov =() =>{
-
-
 	document.getElementById("mainBlock").innerHTML += `
 	<div class="slider">
 			<img class="imgForSlider" id="sl1" onclick="slider(1)" src="picture/action1.jpg">
