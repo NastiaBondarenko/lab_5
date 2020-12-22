@@ -1,4 +1,6 @@
-const fillOneAction = (id) =>{
+import {promisedAction} from './getJson.js';
+
+export const fillOneAction = (id) =>{
 	promisedAction.then((action) => {
 		if (action.length > 0) {
 		    for (let key in action) {

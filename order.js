@@ -1,5 +1,6 @@
+import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
 
-const fillOrder = () =>{
+export const fillOrder = () =>{
 	document.getElementById("mainBlock").innerHTML += `
 	<div class="baskBlock">
 		<div class="delivery">

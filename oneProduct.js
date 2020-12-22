@@ -1,5 +1,9 @@
+import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
 
-const fillOneProduct = (id) =>{
+
+
+
+export const fillOneProduct = (id) =>{
 	let active;
 	 promisedPizza.then((pizza) => {
         if (pizza.length > 0) {

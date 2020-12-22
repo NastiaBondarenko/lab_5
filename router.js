@@ -1,6 +1,6 @@
+import {fillOrder} from './order.js'
 
-
-const routes = [
+export const routes = [
     { path: "#action", view: fillAction },
     { path: "#home", view: fillPageCategory },
     { path: "#", view: fillPageCategoryObnov },
@@ -14,7 +14,7 @@ const routes = [
 
 
 
-const router = () =>{
+export const router = () =>{
 
 	let a = window.location.href;
 	let k = a.indexOf('#');

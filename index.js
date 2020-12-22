@@ -1,5 +1,8 @@
 'use strict'
 
+import {routes, router} from './router.js';
+
+
 function getContent(url) {
     return fetch(url).then(content => content.json());
 }

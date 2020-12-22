@@ -1,5 +1,5 @@
 let bull = 1;
-const slider =(id) =>{
+export const slider =(id) =>{
 	if(id == 5) bull = !bull
 	if(id == 1) bull = !bull	
 	if(bull == 0){
