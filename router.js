@@ -5,6 +5,10 @@ import {fillPageCategoryObnov} from './fillPageCategoryObnov.js';
 import {fillOneAction} from './oneAction.js';
 import {fillOneProduct} from './oneProduct.js';
 
+export {routes, router};
+
+
+
 const routes = [
     { path: "#action", view: fillAction },
     //{ path: "#home", view: fillPageCategory },
@@ -49,4 +53,3 @@ function router(){
     document.documentElement.scrollTop = 0;    
 }
 
-export {routes, router};
