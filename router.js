@@ -4,7 +4,7 @@ import {fillPageCategory} from './home.js';
 import {fillPageCategoryObnov} from './fillPageCategoryObnov.js';
 import {fillOneAction} from './oneAction.js';
 import {fillOneProduct} from './oneProduct.js';
-
+import {promisedCategory} from './getJson.js';
 export {routes, router};
 
 
