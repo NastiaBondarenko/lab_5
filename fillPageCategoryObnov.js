@@ -1,5 +1,5 @@
 export {fillPageCategoryObnov};
-import {promisedCategory} from './getJson.js';
+import promisedCategory from './getJson.js';
 
 
 
