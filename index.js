@@ -7,14 +7,13 @@ import {promisedIngridients} from './getJson.js';
 import {iconMenu} from './function.js';
 import {selfPickup} from './function.js';
 import {delivery} from './function.js';
-
-
-import {size} from './function.js';
+import {language} from './function.js';
 export {countSuma};
-export default basket;
+export {basket};
+export {orderForOnclick0, orderForOnclick1};
 
 
-console.log("he")
+
 
 function getContent(url) {
     return fetch(url).then(content => content.json());
@@ -131,7 +130,7 @@ const saveBasket = (id, prisInt, size) =>{
 		countSuma();			 
 }
 
-const basket = (prise, id, bull) =>{
+function basket(prise, id, bull){
 	
 	let size;
 	if(bull){
@@ -166,4 +165,29 @@ const basket = (prise, id, bull) =>{
 				
 		}			
 		
+}
+
+
+const orderForOnclick0 =() =>{
+	order(0)
+}
+
+const orderForOnclick1 =() =>{
+	order(1)
+}
+
+
+document.getElementById("forFunctionLanguage").onclick = language;
+
+
+
+
+function size(prod, j, prise){
+	console.log
+	for (var i = 1; i < document.getElementById(prod).childNodes.length; i=i+2) {
+		document.getElementById(prod).childNodes[i].style = "background-color: #efefef; color: black"
+		document.getElementById(prise).childNodes[i].hidden = "true";
+	}
+	document.getElementById(prod).childNodes[j].style = "background-color: #4f4f4f; color: white"
+	document.getElementById(prise).childNodes[j].hidden = "";
 }

@@ -1,6 +1,6 @@
 import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
 
-
+import {basket} from './index.js';
 
 
 export const fillOneProduct = (id) =>{
@@ -27,12 +27,18 @@ export const fillOneProduct = (id) =>{
 								<div class="ingreds" id = "ingreds"></div>
 								<div class="priceAndBaskOneProduct">
 									<p class="priceOneProduct"><strong>Від `+pizza[key1].price[0]+`грн</strong></p>
-									<div class="basketRed" onclick="basket('prise`+ pizza[key1].id+`', `+ pizza[key1].id+`, false)">В кошик</div>
+									<div class="basketRed" id="basketRedForOnclick" )">В кошик</div>
 								</div>
 							</div>
 					</div>
 
 					`
+					let prise = "prise"  + pizza[key1].id;
+					const basketOnClick =() =>{
+						basket(prise, pizza[key1].id, false)
+					}
+					document.getElementById("basketRedForOnclick").onclick = basketOnClick;
+
 					 promisedIngridients.then((ingred) => {
 					    if (ingred.length > 0) {
 					         for (let key2 in ingred) {

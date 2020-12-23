@@ -1,13 +1,15 @@
+export {language};
 export {iconMenu};
 export {selfPickup};
 export {delivery};
-export {size} ;
+export {size};
+
 
 let lang = document.getElementById("languages");
 let arrow = document.getElementById("arrowIcons");
 
 let i = 0;
-const language = () =>{
+function language (){
 	if(i == 0){
 		i = 1;
 	 lang.style = "display:block;"

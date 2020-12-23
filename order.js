@@ -1,15 +1,20 @@
 import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
 import {fillOrderList} from './orderList.js';
+import {orderForOnclick0, orderForOnclick1} from './index.js'
+import {delivery} from './function.js';
+import {selfPickup} from './function.js';
 
 
 export const fillOrder = () =>{
+	
+
 	document.getElementById("mainBlock").innerHTML += `
 	<div class="baskBlock">
 		<div class="delivery">
 			<h2>Оформлення замовлення</h2>
 			<div class="deliveryButtons">
-				<button class="deliveryButton deliveryButton1" id="deliveryB1" onclick="delivery()">Доставка</button>
-				<button class="deliveryButton deliveryButton2" id="deliveryB2" onclick="selfPickup()">З собою</button>
+				<button class="deliveryButton deliveryButton1" id="deliveryB1" >Доставка</button>
+				<button class="deliveryButton deliveryButton2" id="deliveryB2" >З собою</button>
 			</div>
 			<div class="formBask" id="formBask1" >
 				<h2>Контакти</h2>
@@ -47,7 +52,7 @@ export const fillOrder = () =>{
 					<input type="text" name="typePay" class="inputBask wid3" placeholder="Тип оплати">
 				</form>
 				
-				<button class="makePrder" onclick ="order(1)">Замовити</button>
+				<button class="makePrder" id="makeOrderForOnclick1">Замовити</button>
 			</div>
 			<div class="formBask" id="formBask2" hidden="" >
 				<h2>Контакти</h2>
@@ -80,7 +85,7 @@ export const fillOrder = () =>{
 					<input type="text" name="typePay" class="inputBask wid3" placeholder="Тип оплати">
 				</form>
 				
-				<button class="makePrder" onclick ="order(0)">Замовити</button>
+				<button class="makePrder" id="makeOrderForOnclick0" >Замовити</button>
 			</div>
 		</div>
 		<div class="orderBask">
@@ -110,5 +115,11 @@ export const fillOrder = () =>{
 			}
 		}
 		fillOrderList(product);
+		}).then(()=>{
+			document.getElementById("makeOrderForOnclick0").onclick = orderForOnclick0;
+			document.getElementById("makeOrderForOnclick1").onclick = orderForOnclick1;
+			document.getElementById("deliveryB1").onclick = delivery;
+			document.getElementById("deliveryB2").onclick = selfPickup;
 		})			
+	  
 }

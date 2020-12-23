@@ -20,10 +20,12 @@ function fillPageCategory() {
 
                  promisedPizza.then((pizza) => {
 		        if (pizza.length > 0) {
-		            for (let key1 in pizza) {
-		            	
+		        	for (let key1 in pizza) {
+
 		            	if(pizza[key1].category == category[key].nameId){
 		            		
+			                
+
 
 			               document.getElementById(pizza[key1].category).innerHTML += `
 			                <div class="product">
@@ -34,12 +36,9 @@ function fillPageCategory() {
 								<p class="margin" id="ingred`+ pizza[key1].id+`"></p>
 								<u>Замінити інгредієнти</u>
 								<div class="size" id="prod`+ pizza[key1].id+`">
-									<button onclick="size('prod`+ pizza[key1].id+`', 1, 'prise`+ pizza[key1].id+`')"
-									 class="first" >Маленька</button>
-									<button onclick="size('prod`+ pizza[key1].id+`', 3, 'prise`+ pizza[key1].id+`')" 
-									 class="nofirst1">Середня</button>
-									<button  onclick="size('prod`+ pizza[key1].id+`', 5, 'prise`+ pizza[key1].id+`')"
-									class="nofirst2">Велика</button>
+									<button id="size1ForOnclick`+ pizza[key1].id+`"  class="first" >Маленька</button>
+									<button id="size2ForOnclick`+ pizza[key1].id+`"   class="nofirst1">Середня</button>
+									<button id="size3ForOnclick`+ pizza[key1].id+`" 	class="nofirst2">Велика</button>
 								</div>
 								<div>
 									<div class="prise" id="prise`+ pizza[key1].id+`">
@@ -47,10 +46,12 @@ function fillPageCategory() {
 										<p hidden>`+ pizza[key1].price[1]+`грн</p>
 										<p hidden>`+ pizza[key1].price[2]+`грн</p>
 									</div>
-									<div class="basketRed" onclick="basket('prise`+ pizza[key1].id+`', `+ pizza[key1].id+`, true)">В кошик</div>
+									<div class="basketRed" id="ForBasketOnclick`+ pizza[key1].id+`" >В кошик</div>
 								</div>
 							</div>
 			                `
+			                
+			                
 			                let ingreds='';
 			                 promisedIngridients.then((ingred) => {
 							    if (ingred.length > 0) {
@@ -69,11 +70,25 @@ function fillPageCategory() {
 
 							     }
 							     }) 
-			            }    
+			            
+			            } 
+			            if(key == 3){
+            			let id = "ForBasketOnclick" + pizza[key1].id;
+			                let price = "prise"+ pizza[key1].id;
+
+		            	const funcForbasket = () =>{ 
+			                	basket(price,  pizza[key1].id, true);
+			                }
+			                document.getElementById(id).onclick = funcForbasket;
+			                
+			                
+            			}   
 		            }
+		         
 		        }
 
    			 })
+
             }
         }
     })
