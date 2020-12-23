@@ -7,9 +7,11 @@ import {promisedIngridients} from './getJson.js';
 import {iconMenu} from './function.js';
 import {selfPickup} from './function.js';
 import {delivery} from './function.js';
+import {iconMenu} from './function.js';
+
 import {size} from './function.js';
 export {countSuma};
-export {basket};
+export default basket;
 
 
 console.log("he")
