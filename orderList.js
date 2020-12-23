@@ -3,6 +3,7 @@ export {fillOrderList};
 import {promisedCategory} from './getJson.js';
 import {promisedPizza} from './getJson.js';
 import {promisedIngridients} from './getJson.js';
+import { plusOrMinusProduct,  deleteOrder} from './functionForOrder.js';
 
 const fillOrderList = (product)=>{
 	let suma = 0;
@@ -21,7 +22,7 @@ const fillOrderList = (product)=>{
 									<div class="mainPartOrederForm">
 										<div class="textBlockInOrder">
 											<h1>`+pizza[key1].productName+`</h1>
-											<img onclick="deleteOrder(`+pizza[key1].id+`,`+j+`)" src="picture/x2.png">
+											<img id ="deleteOrder`+pizza[key1].id+`"  src="picture/x2.png">
 										</div>
 										<div class="ingredInOrder">	
 												<p>Моцарела Соус Domino's</p>
@@ -30,15 +31,31 @@ const fillOrderList = (product)=>{
 										<div class="priseAndNumber">
 											<div><strong>`+pizza[key1].price[j]+`грн</strong></div>
 											<div class="numberOrder">
-												<button onclick="plusOrMinusProduct(`+pizza[key1].id+`,`+j+`, true )">+</button>
+												<button id="plusProduct`+pizza[key1].id+`" >+</button>
 												<p>`+product[i][1][j]+`</p>
-												<button onclick="plusOrMinusProduct(`+pizza[key1].id+`,`+j+`, false )">-</button>
+												<button id = "MinusProduct`+pizza[key1].id+`" >-</button>
 											</div>
 										</div>
 									</div>
 								</div>
 								<div class="greyline"></div>	
 	    						`
+
+	    						const plusProductForOnclick = () => {
+	    							plusOrMinusProduct(pizza[key1].id, j, true )
+	    						}
+	    						const MinusProductForOnclick = () => {
+	    							plusOrMinusProduct(pizza[key1].id, j, false )
+	    						}
+	    						const deleteOrderForOnclick =() =>{
+	    							deleteOrder(pizza[key1].id,j);
+	    						}
+	    						let id = "plusProduct" + pizza[key1].id;
+	    						let id2 = "MinusProduct"+pizza[key1].id;
+	    						let id3 = "deleteOrder"+pizza[key1].id;
+	    						document.getElementById(id).onclick  = plusProductForOnclick;
+	    						document.getElementById(id2).onclick  = MinusProductForOnclick;
+	    						document.getElementById(id3).onclick  = deleteOrderForOnclick;
 	    					}
 	    				}
 	    			}

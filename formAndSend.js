@@ -1,4 +1,6 @@
-
+export {sendServer};
+export {order};
+import {basketShow} from './functionBaske.js'
 
 
 
@@ -13,6 +15,7 @@ const sendServer = (form) =>{
 	
             .then(response => response.json())
             .then(data => {
+            	console.log(data)
                 let orderId = data['id'];
                 history.pushState({}, null, '#order/' + orderId.toString());
                  document.getElementById("mainBlock").innerHTML = ``;

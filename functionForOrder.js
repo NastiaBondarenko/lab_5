@@ -1,3 +1,6 @@
+export { plusOrMinusProduct,  deleteOrder};
+import {fillOrder} from './order.js';
+import {countSuma} from './index.js';
 
 
 const plusOrMinusProduct = (id, size, bull) =>{

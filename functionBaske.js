@@ -1,4 +1,4 @@
-
+export {basketShow};
 
 
 const basketShow = (suma, count) =>{

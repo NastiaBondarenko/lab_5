@@ -8,6 +8,8 @@ import {iconMenu} from './function.js';
 import {selfPickup} from './function.js';
 import {delivery} from './function.js';
 import {language} from './function.js';
+import {order} from './formAndSend.js'
+import {basketShow} from './functionBaske.js'
 export {countSuma};
 export {basket};
 export {orderForOnclick0, orderForOnclick1};
@@ -75,16 +77,7 @@ async function getData(url, order) {
   }
 
 
-const basketShow = (suma, count) =>{
-	let result = suma+'грн'
-		if(count<10){
-			document.getElementById("counter").innerHTML = '0'+count;
-		} 
-		else document.getElementById("counter").innerHTML =count;
-		document.getElementById("basketPay").innerHTML = result;
-		document.getElementById("basketPay").hidden = "";
 
-}
 
 const countSuma = () =>{
 	let count = 0; 
@@ -178,7 +171,7 @@ const orderForOnclick1 =() =>{
 
 
 document.getElementById("forFunctionLanguage").onclick = language;
-
+document.getElementById("iconMenu").onclick = iconMenu;
 
 
 
