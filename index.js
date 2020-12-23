@@ -1,7 +1,7 @@
 'use strict'
 
 import {routes, router} from './router.js';
-
+import {promisedCategory} from './getJson.js';
 
 function getContent(url) {
     return fetch(url).then(content => content.json());
