@@ -2,7 +2,8 @@
 
 import {routes, router} from './router.js';
 import {promisedCategory} from './getJson.js';
-
+export {countSuma};
+export {basket};
 
 
 function getContent(url) {
