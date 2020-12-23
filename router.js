@@ -11,7 +11,7 @@ export {routes, router};
 
 const routes = [
     { path: "#action", view: fillAction },
-    //{ path: "#home", view: fillPageCategory },
+    { path: "#home", view: fillPageCategory },
     { path: "#", view: fillPageCategoryObnov },
     { path: "#action/", view: fillOneAction },
     { path: "#product/", view: fillOneProduct },
