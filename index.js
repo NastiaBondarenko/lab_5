@@ -2,6 +2,8 @@
 
 import {routes, router} from './router.js';
 import {promisedCategory} from './getJson.js';
+import {promisedPizza} from './getJson.js';
+import {promisedIngridients} from './getJson.js';
 export {countSuma};
 export {basket};
 
