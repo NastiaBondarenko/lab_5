@@ -1,5 +1,5 @@
-export {countSuma};
 import {promisedPizza} from './getJson.js';
+export {countSuma};
 
 
 const basketShow = (suma, count) =>{
