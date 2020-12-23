@@ -1,3 +1,5 @@
+export {countSuma};
+
 
 const basketShow = (suma, count) =>{
 	let result = suma+'грн'
@@ -10,7 +12,7 @@ const basketShow = (suma, count) =>{
 
 }
 
-export const countSuma = () =>{
+const countSuma = () =>{
 	let count = 0; 
 	let suma = 0;
 	let keys = Object.keys(localStorage);
