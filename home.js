@@ -3,6 +3,7 @@ import {promisedPizza} from './getJson.js';
 import {promisedIngridients} from './getJson.js';
 import {basket} from './index.js';
 import {countSuma} from './index.js';
+import {size} from './index.js';
 export {fillPageCategory};
 
 
