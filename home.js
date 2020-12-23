@@ -2,8 +2,8 @@ import {promisedCategory} from './getJson.js';
 import {promisedPizza} from './getJson.js';
 import {promisedIngridients} from './getJson.js';
 import {basket} from './index.js';
-export {fillPageCategory};
 import {countSuma} from './index.js';
+export {fillPageCategory};
 
 
 function fillPageCategory() {
