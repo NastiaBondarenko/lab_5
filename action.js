@@ -1,4 +1,7 @@
 export {fillAction};
+
+import {promisedAction} from './getJson.js';
+
  function fillAction(){
 	promisedAction.then((action) => {
 		if (action.length > 0) {

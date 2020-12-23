@@ -1,4 +1,7 @@
 export {fillPageCategoryObnov};
+import {promisedCategory} from './getJson.js';
+
+
 
 const fillPageCategoryObnov =() =>{
 	document.getElementById("mainBlock").innerHTML += `
