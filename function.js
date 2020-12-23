@@ -1,7 +1,7 @@
 export {iconMenu};
 export {selfPickup};
 export {delivery};
-export {size};
+export default size ;
 
 let lang = document.getElementById("languages");
 let arrow = document.getElementById("arrowIcons");
@@ -21,7 +21,7 @@ const language = () =>{
 }
 
 
-const size = (prod, j, prise) =>{
+function size(prod, j, prise){
 	console.log
 	for (var i = 1; i < document.getElementById(prod).childNodes.length; i=i+2) {
 		document.getElementById(prod).childNodes[i].style = "background-color: #efefef; color: black"
