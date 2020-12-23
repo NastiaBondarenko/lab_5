@@ -2,8 +2,6 @@
 
 import {routes, router} from './router.js';
 import {promisedCategory} from './getJson.js';
-import {countSuma} from './functionBaske.js';
-import {basket} from './functionBaske.js';
 
 
 
@@ -66,7 +64,7 @@ async function getData(url, order) {
     return response.json();
   }
 
-  
+
 const basketShow = (suma, count) =>{
 	let result = suma+'грн'
 		if(count<10){
