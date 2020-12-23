@@ -3,6 +3,8 @@
 import {routes, router} from './router.js';
 import {promisedCategory} from './getJson.js';
 import {countSuma} from './functionBaske.js';
+import {basket} from './functionBaske.js';
+
 
 
 function getContent(url) {

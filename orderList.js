@@ -1,5 +1,8 @@
 
 export {fillOrderList};
+import {promisedCategory} from './getJson.js';
+import {promisedPizza} from './getJson.js';
+import {promisedIngridients} from './getJson.js';
 
 const fillOrderList = (product)=>{
 	let suma = 0;
