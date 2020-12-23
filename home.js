@@ -4,7 +4,6 @@ import {promisedIngridients} from './getJson.js';
 export {fillPageCategory};
 
 
-
 function fillPageCategory() {
     promisedCategory.then((category) => {
         if (category.length > 0) {
