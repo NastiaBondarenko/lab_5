@@ -6,6 +6,7 @@ export {countSuma};
 export {basket};
 
 
+
 function getContent(url) {
     return fetch(url).then(content => content.json());
 }
