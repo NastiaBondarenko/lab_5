@@ -12,6 +12,7 @@ export {countSuma};
 export {basket};
 
 
+console.log("he")
 
 function getContent(url) {
     return fetch(url).then(content => content.json());
