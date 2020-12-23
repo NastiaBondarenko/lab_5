@@ -1,3 +1,7 @@
+export {iconMenu};
+export {selfPickup};
+export {delivery};
+export {size};
 
 let lang = document.getElementById("languages");
 let arrow = document.getElementById("arrowIcons");

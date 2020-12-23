@@ -4,7 +4,10 @@ import {routes, router} from './router.js';
 import {promisedCategory} from './getJson.js';
 import {promisedPizza} from './getJson.js';
 import {promisedIngridients} from './getJson.js';
-
+import {iconMenu} from './function.js';
+import {selfPickup} from './function.js';
+import {delivery} from './function.js';
+import {size} from './function.js';
 export {countSuma};
 export {basket};
 
