@@ -1,4 +1,8 @@
 export {fillPageCategory};
+import {promisedCategory} from './getJson.js';
+import {promisedPizza} from './getJson.js';
+import {promisedIngridients} from './getJson.js';
+
 
 function fillPageCategory() {
     promisedCategory.then((category) => {
