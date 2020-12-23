@@ -2,6 +2,8 @@
 
 import {routes, router} from './router.js';
 import {promisedCategory} from './getJson.js';
+import {countSuma} from './functionBaske.js';
+
 
 function getContent(url) {
     return fetch(url).then(content => content.json());

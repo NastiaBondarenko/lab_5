@@ -10,7 +10,7 @@ const basketShow = (suma, count) =>{
 
 }
 
-const countSuma = () =>{
+export const countSuma = () =>{
 	let count = 0; 
 	let suma = 0;
 	let keys = Object.keys(localStorage);

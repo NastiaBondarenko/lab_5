@@ -1,6 +1,6 @@
 export {fillPageCategoryObnov};
 import {promisedCategory} from './getJson.js';
-
+import {promisedPizza} from './getJson.js';
 
 
 const fillPageCategoryObnov =() =>{
