@@ -1,6 +1,7 @@
 export {sendServer};
 export {order};
-import {basketShow} from './functionBaske.js'
+import {basketShow} from './functionBaske.js';
+import {promisedPizza} from './getJson.js';
 
 
 
@@ -66,7 +67,7 @@ const sendServer = (form) =>{
 			         }	
 			     }
 				}
-				 for(i = 0; i < production.length; i++){
+				 for(let i = 0; i < production.length; i++){
                  	 	console.log("here")
                  	 	document.getElementById("mainBlock").innerHTML += `
                  	 	<p>`+production[i]+`</p>
@@ -78,9 +79,7 @@ const sendServer = (form) =>{
                  	
                 	 
             })
-            .catch((error) => {
-                document.getElementById("mainBlock").innerHTML = "Eror";
-			})
+           
 			localStorage.clear()
 		basketShow(0, 0);
 
