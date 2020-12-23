@@ -1,5 +1,5 @@
 
-
+export {fillOrderList};
 
 const fillOrderList = (product)=>{
 	let suma = 0;

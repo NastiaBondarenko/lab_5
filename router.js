@@ -5,6 +5,7 @@ import {fillPageCategoryObnov} from './fillPageCategoryObnov.js';
 import {fillOneAction} from './oneAction.js';
 import {fillOneProduct} from './oneProduct.js';
 import {promisedCategory} from './getJson.js';
+import {fillOrderList} from './orderList.js';
 export {routes, router};
 
 
