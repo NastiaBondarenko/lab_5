@@ -1,4 +1,6 @@
 import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
+import {fillOrderList} from './orderList.js';
+
 
 export const fillOrder = () =>{
 	document.getElementById("mainBlock").innerHTML += `
