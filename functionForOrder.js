@@ -1,6 +1,6 @@
 export { plusOrMinusProduct,  deleteOrder};
 import {fillOrder} from './order.js';
-import {countSuma} from './index.js';
+import {countSuma} from './functionBaske.js';
 
 
 const plusOrMinusProduct = (id, size, bull) =>{
