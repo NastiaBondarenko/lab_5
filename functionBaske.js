@@ -1,5 +1,7 @@
 export {basketShow};
-
+export {countSuma};
+export {saveBasket};
+export {basket};
 
 const basketShow = (suma, count) =>{
 	let result = suma+'грн'

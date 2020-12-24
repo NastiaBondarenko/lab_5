@@ -5,14 +5,7 @@ import {promisedIngridients} from './getJson.js';
 
 
 const fillPageCategoryObnov =() =>{
-	document.getElementById("mainBlock").innerHTML += `
-	<div class="slider">
-			<img class="imgForSlider" id="sl1" onclick="slider(1)" src="picture/action1.jpg">
-			<img class="imgForSlider" id="sl2" onclick="slider(2)" src="picture/action2.jpg">
-			<img class="imgForSlider" id="sl3" onclick="slider(3)" src="picture/action3.jpg">
-			<img class="imgForSlider" id="sl4" onclick="slider(4)" src="picture/action4.jpg">
-			<img class="imgForSlider" id="sl5" onclick="slider(5)" src="picture/action5.jpg">
-		</div>`
+	
     promisedCategory.then((category) => {
         if (category.length > 0) {
             for (let key in category) {
