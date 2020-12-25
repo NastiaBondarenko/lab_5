@@ -1,8 +1,6 @@
-import {promisedCategory} from './getJson.js';
-import {promisedPizza} from './getJson.js';
-import {promisedIngridients} from './getJson.js';
-import {basket} from './functionBaske.js';
-import {countSuma} from './functionBaske.js';
+import {promisedAction, promisedCategory, promisedPizza , promisedIngridients} from './getJson';
+import {basket} from './index.js';
+import {countSuma} from './index.js';
 export {fillPageCategory};
 
 

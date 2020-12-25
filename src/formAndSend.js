@@ -1,11 +1,9 @@
-export {sendServer};
-export {order};
-import {basketShow} from './functionBaske.js';
-import {promisedPizza} from './getJson.js';
+
+import {basketShow} from './index.js';
+import {promisedAction, promisedCategory, promisedPizza , promisedIngridients} from './getJson';
 
 
-
-const sendServer = (form) =>{
+export const sendServer = (form) =>{
 	fetch('https://my-json-server.typicode.com/NastiaBondarenko/db2/orders', {
                 method: 'POST',
                 headers: {
@@ -68,7 +66,6 @@ const sendServer = (form) =>{
 			     }
 				}
 				 for(let i = 0; i < production.length; i++){
-                 	 	console.log("here")
                  	 	document.getElementById("mainBlock").innerHTML += `
                  	 	<p>`+production[i]+`</p>
                  	 	`
@@ -87,7 +84,7 @@ const sendServer = (form) =>{
 }
 
 
-const order = (bull) =>{
+export const order = (bull) =>{
 	if(document.getElementById("counter").innerHTML != "00"){
 		let product=[];
 			let keys = Object.keys(localStorage);
@@ -139,7 +136,6 @@ const order = (bull) =>{
 		}
 		
 		else{
-			console.log("hi")
 		let form = {
 	 		"name" : form6.elements.name.value,
 	 		"number" : form6.elements.number.value, 

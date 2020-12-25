@@ -1,5 +1,5 @@
 export {fillAction};
-
+import {promisedPizza} from './getJson.js';
 import {promisedAction} from './getJson.js';
 
  function fillAction(){

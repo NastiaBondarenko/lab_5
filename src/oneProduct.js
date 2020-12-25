@@ -1,7 +1,5 @@
-import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
-
-import {basket} from './functionBaske.js';
-
+import {basket} from './index.js';
+import {promisedAction, promisedCategory, promisedPizza , promisedIngridients} from './getJson';
 
 export const fillOneProduct = (id) =>{
 	let active;

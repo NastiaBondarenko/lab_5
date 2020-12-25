@@ -4,7 +4,7 @@ import {fillPageCategory} from './home.js';
 import {fillPageCategoryObnov} from './fillPageCategoryObnov.js';
 import {fillOneAction} from './oneAction.js';
 import {fillOneProduct} from './oneProduct.js';
-import {promisedCategory} from './getJson.js';
+import {promisedAction, promisedCategory, promisedIngridients} from './index.js';
 import {fillOrderList} from './orderList.js';
 export {routes, router};
 
@@ -13,7 +13,7 @@ export {routes, router};
 const routes = [
     { path: "#action", view: fillAction },
     { path: "#home", view: fillPageCategory },
-    { path: "#", view: fillPageCategoryObnov },
+    { path: "#", view: fillPageCategory },
     { path: "#action/", view: fillOneAction },
     { path: "#product/", view: fillOneProduct },
     { path: "#order", view: fillOrder},

@@ -1,5 +1,5 @@
 import {promisedAction} from './getJson.js';
-
+import {promisedPizza} from './getJson.js';
 
 export const fillOneAction = (id) =>{
 	promisedAction.then((action) => {

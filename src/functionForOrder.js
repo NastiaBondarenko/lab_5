@@ -1,16 +1,18 @@
-export { plusOrMinusProduct,  deleteOrder};
+
 import {fillOrder} from './order.js';
-import {countSuma} from './functionBaske.js';
+import {countSuma} from './index.js';
+import {promisedAction, promisedCategory, promisedPizza , promisedIngridients} from './getJson';
 
 
-const plusOrMinusProduct = (id, size, bull) =>{
+
+export const plusOrMinusProduct = (id, size, bull) =>{
 	if(bull){
 		let keys = Object.keys(localStorage);
     	for(let key of keys) {
     		if(key == id){
 				let f = localStorage.getItem(id)+ size;
 				localStorage.setItem(id, f) ;
-				document.getElementById("mainBlock").innerHTML =``
+				document.getElementById("mainBlock").innerHTML =``;
 				fillOrder();
 				countSuma();
 	
@@ -30,7 +32,7 @@ const plusOrMinusProduct = (id, size, bull) =>{
 					}
 				}
 				localStorage.setItem(id, f);
-				document.getElementById("mainBlock").innerHTML =``
+				document.getElementById("mainBlock").innerHTML =``;
 				fillOrder();
 				countSuma();
 	
@@ -40,7 +42,7 @@ const plusOrMinusProduct = (id, size, bull) =>{
 }
 
 
-const deleteOrder = (id, size)=>{
+export const deleteOrder = (id, size)=>{
 	let keys = Object.keys(localStorage);
     	for(let key of keys) {
     		if(key == id){
@@ -58,7 +60,7 @@ const deleteOrder = (id, size)=>{
 				let count = 0; 
 				let suma = 0;
 				let keys = Object.keys(localStorage);
-				 countSuma();
+				countSuma();
 	
     		}
     	}		

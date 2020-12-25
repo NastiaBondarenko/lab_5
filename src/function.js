@@ -4,7 +4,7 @@ export {selfPickup};
 export {delivery};
 export {size};
 
-
+import {promisedPizza} from './getJson.js';
 let lang = document.getElementById("languages");
 let arrow = document.getElementById("arrowIcons");
 

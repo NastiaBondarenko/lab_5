@@ -1,11 +1,11 @@
 
-export {fillOrderList};
-import {promisedCategory} from './getJson.js';
-import {promisedPizza} from './getJson.js';
-import {promisedIngridients} from './getJson.js';
-import { plusOrMinusProduct,  deleteOrder} from './functionForOrder.js';
 
-const fillOrderList = (product)=>{
+
+import {promisedAction, promisedCategory, promisedPizza , promisedIngridients} from './getJson';
+import {plusOrMinusProduct, deleteOrder} from './functionForOrder.js'
+
+
+export const fillOrderList = (product)=>{
 	let suma = 0;
 	promisedPizza.then((pizza) => {
 		let size = ['Маленька', 'Середня', 'Велика']
@@ -41,6 +41,32 @@ const fillOrderList = (product)=>{
 								<div class="greyline"></div>	
 	    						`
 
+	    					}
+	    				}
+	    			}
+	    		}
+			}
+		}
+		suma=Math.floor(suma*100)/100;
+		let k = suma+'грн';
+		document.getElementById("priseOrder").innerHTML = k;
+	}).then(()=>{
+		makeOnclick(product);
+	})
+}
+
+
+const makeOnclick =(product) =>{
+	let suma = 0;
+	promisedPizza.then((pizza) => {
+		let size = ['Маленька', 'Середня', 'Велика']
+		if (pizza.length > 0) {
+		    for (let key1 in pizza) {
+	    		for(let i = 0; i < product.length; i++){
+	    			if(pizza[key1].id == product[i][0]){
+	    				for(let j = 0; j < product[i][1].length; j++){
+	    					if(product[i][1][j]!=0){
+	    						
 	    						const plusProductForOnclick = () => {
 	    							plusOrMinusProduct(pizza[key1].id, j, true )
 	    						}
@@ -62,8 +88,6 @@ const fillOrderList = (product)=>{
 	    		}
 			}
 		}
-		suma=Math.floor(suma*100)/100;
-		let k = suma+'грн';
-		document.getElementById("priseOrder").innerHTML = k;
+
 	})
 }

@@ -1,8 +1,8 @@
-import {promisedAction, promisedCategory, promisedPizza, promisedIngridients} from './getJson.js';
+import {promisedAction, promisedCategory, promisedPizza , promisedIngridients} from './getJson';
 import {fillOrderList} from './orderList.js';
 import {delivery} from './function.js';
 import {selfPickup} from './function.js';
-
+import {order} from './formAndSend.js'
 
 export const fillOrder = () =>{
 	
@@ -112,8 +112,8 @@ export const fillOrder = () =>{
 					}
 				}
 			}
+		fillOrderList(product);	
 		}
-		fillOrderList(product);
 		}).then(()=>{
 			document.getElementById("makeOrderForOnclick0").onclick = orderForOnclick0;
 			document.getElementById("makeOrderForOnclick1").onclick = orderForOnclick1;
