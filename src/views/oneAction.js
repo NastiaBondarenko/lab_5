@@ -4,7 +4,7 @@ export const fillOneAction = (id) => {
   promisedAction.then((action) => {
     if (action.length > 0) {
       for (const key in action) {
-        if (action[key].id === id) {
+        if (action[key].id == id) {
           document.getElementById('mainBlock').innerHTML += `
 <div class="greyline"></div>
 <div class="action">
